@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=Gabarito:wght@400..900&family=Vibur&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-nav: rgba(250, 248, 254, 0.6);
+  --color-hero: rgba(94, 7, 225, 0.04);
+  --color-textDefaultColor: #1E1E1E;
+  --font-default: 'Gabarito', sans-serif;
+  --color-primary: #5E07E1;
+  --color-bg-hero: rgba(94, 7, 225, 0.04);
+}

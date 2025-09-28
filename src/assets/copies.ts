@@ -1,0 +1,7 @@
+export const whoarewe:string = `We are a group of Engineers from Pulchowk Campus turned Content Creator and Educator. Ever since we were kids, we’d break open the machines around us and seeing the technology inside often overwhelmed us but also made us very eager to learn. <br /> <br />
+
+Sure we learnt a lot of interesting theories in our school, but we always felt missing in our learning as we would hardly build anything. Some cool projects? Or a Robot? With both Hardware and Software?<br /> <br />
+
+So, with that energy and curiosity still engraved in us, after our pursuit of Engineering, we started educating students through our youtube video when we modelled our pedagogy in a story telling approach infusing interesting cuts and animation in Our YouTube channel Third World Nerd. To our delight, many students from all over the country enjoyed our approach and cited us as an inspiration to enter robotics but also expressed the barrier to entry in robotics when they tried to build projects like Engineer Kumar (Our Hero of Third World Nerd).<br /> <br />
+
+This is why we started our journey with Makit Labs, to ease a student’s entry to robotics. We are here to help students build their first ever Robotics Project, which will teach them how hardware, software, mathematics and AI all come together to solve a problem. We want to show them how fun the theories can be when you build a practical application using it which will in turn enhance their creativity and make them more resilient.`
