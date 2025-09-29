@@ -1,37 +1,64 @@
 import type { FC } from "react";
-import { testimonials } from "../../assets/testimonials";
+import { reviews } from "../../assets/reviews";
 import ReviewCard from "../../components/ReviewCard";
 import { useState } from "react";
 
 const TrustOurClients: FC = () => {
   const [showAll, setShowAll] = useState(false);
 
+  // Set a massive value that guarantees all content will fit.
+  const expandedMaxHeight = "max-h-[5000px]";
+  // Define the height of the initially visible content (e.g., two rows of cards).
+  const visibleMaxHeight = "max-h-[600px]"; 
+
+  // 1. Divide reviews into three columns
+  const column1 = reviews.filter((_, i) => i % 3 === 0);
+  const column2 = reviews.filter((_, i) => i % 3 === 1);
+  const column3 = reviews.filter((_, i) => i % 3 === 2);
+
   return (
     <section className="px-[440px] py-20 font-default bg-white relative">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="text-5xl font-bold">
-          Trust our <span className="text-primary">Clients</span>
+        <h2 className="text-7xl">
+          Trust our <span className="text-primary font-bold">Clients</span>
         </h2>
       </div>
 
-      {/* Grid Wrapper with fade mask */}
+      {/* Main Grid Wrapper with fade mask */}
       <div className="relative">
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 ease-in-out ${
-            showAll ? "max-h-none" : "max-h-[600px] overflow-hidden"
+          // Use flex to display columns horizontally, enables masonry effect.
+          className={`flex gap-8 overflow-hidden transition-all duration-700 ease-in-out ${
+            showAll ? expandedMaxHeight : `${visibleMaxHeight}`
           }`}
         >
-          {testimonials.map((t, i) => (
-            <div key={i} className="h-fit">
-              <ReviewCard testimonial={t} />
-            </div>
-          ))}
+          {/* Column 1 (Left): Starts lower (lg:mt-20) */}
+          <div className="w-1/3 flex flex-col gap-8 mt-0 lg:mt-20"> 
+            {column1.map((t, i) => (
+              <ReviewCard key={i} review={t} />
+            ))}
+          </div>
+
+          {/* Column 2 (Middle): Starts at the top (mt-0) */}
+          <div className="w-1/3 flex flex-col gap-8">
+            {column2.map((t, i) => (
+              <ReviewCard key={i} review={t} />
+            ))}
+          </div>
+
+          {/* Column 3 (Right): Starts lower (lg:mt-20) */}
+          <div className="w-1/3 flex flex-col gap-8 mt-0 lg:mt-20">
+            {column3.map((t, i) => (
+              <ReviewCard key={i} review={t} />
+            ))}
+          </div>
+
         </div>
 
         {/* Gradient overlay when clipped */}
         {!showAll && (
-          <div className="absolute bottom-0 left-0 right-0 h-42 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white to-transparent pointer-events-none" />
         )}
       </div>
 

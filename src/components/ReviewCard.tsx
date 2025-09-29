@@ -1,25 +1,25 @@
 import type { FC } from "react";
-import type { Testimonial } from "../assets/testimonials";
+import type { Review } from "../../src/assets/reviews";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { Star } from "lucide-react";
 
 
 interface Props {
-  testimonial: Testimonial;
+  review: Review;
 }
 
-const ReviewCard: FC<Props> = ({ testimonial }) => {
+const ReviewCard: FC<Props> = ({ review }) => {
   return (
-    <div className="font-default rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-500 hover:-translate-y-2">
+    <div className="font-default rounded-xl shadow-lg shadow-primary/6 p-6 flex flex-col items-center text-center transition-transform duration-500 hover:-translate-y-2">
         <span className="flex items-center text-gray-800">
           <div className="p-1.5 bg-[#EADDFF] rounded-full mr-3">
             <UserIcon className="w-5 h-5 text-[#4F378A]" />
           </div>
-          {testimonial.name}
+          {review.name}
         </span>
 
       {/* Quote */}
-        <p className="text-primary mb-4 bg-white p-2 rounded-2xl shadow-lg shadow-primary/4">“{testimonial.quote}”</p>
+        <p className="text-primary mb-4 bg-white p-2 rounded-2xl shadow-lg shadow-primary/2">“{review.quote}”</p>
       
 
       {/* Rating */}
@@ -28,7 +28,7 @@ const ReviewCard: FC<Props> = ({ testimonial }) => {
           <Star
             key={idx}
             className={`${
-              idx < Math.round(testimonial.rating)
+              idx < Math.round(review.rating)
                 ? "text-primary"
                 : "text-gray-300"
             } w-4 h-4 fill-primary`}
