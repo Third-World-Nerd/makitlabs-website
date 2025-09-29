@@ -10,7 +10,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Adhrit Pandey",
     school: "Student, NCCS School",
-    image: "src/assets/photo/Adhrit Pandey.jpg",
+    image: "/src/assets/photo/Adhrit Pandey.jpg",
     quote:
       "At makit labs I could run my project in hardware after finishing code. I have made a lot of such projects here like robot gun, led runner and self controlled car and have a lot of fun there.",
     rating: 5,
