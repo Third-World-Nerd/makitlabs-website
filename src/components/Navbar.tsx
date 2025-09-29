@@ -1,6 +1,6 @@
 const Navbar: React.FC = () => {
   return (
-    <nav className="fixed z-50 w-full bg-[var(--color-nav)]/100 backdrop-blur-2xl px-[80px] py-[10px]">
+    <nav className="fixed z-50 w-full bg-white/100 backdrop-blur-2xl px-[80px] py-[10px]">
         <div className="flex h-16 items-center">
             
           <div className="flex-shrink-0">

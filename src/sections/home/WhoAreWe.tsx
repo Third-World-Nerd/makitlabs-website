@@ -52,12 +52,12 @@ const WhoAreWe: React.FC = () => {
         <h2 className="text-7xl mb-[20px]">
           Who are <span className="text-primary font-bold">we</span>
         </h2>
-        <p dangerouslySetInnerHTML={{ __html: whoarewe }} />
+        <p className ="text-gray-800" dangerouslySetInnerHTML={{ __html: whoarewe }} />
         <p className="text-primary font-semibold mt-2">
           Sakar Pathak (Er. Kumar from Third World Nerd)
         </p>
         <span>CEO, Makit Labs</span>
-        <button className="border mt-7 border-purple-600 text-purple-600 px-2 rounded-full w-max hover:bg-purple-600 hover:text-white transition duration-300">
+        <button className="border mt-7 border-purple-600 text-purple-600 px-2 rounded-full w-max cursor-pointer hover:bg-purple-600 hover:text-white transition duration-300">
           Contact Us Directly &gt;&gt;
         </button>
       </div>

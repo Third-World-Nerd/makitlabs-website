@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 const Hero: FC = () => {
   return (
-    <section className="relative top-[84px] h-[calc(100vh-84px)] bg-[var(--color-hero)] font-default overflow-hidden">
+    <section className="relative top-[84px] h-[calc(100vh-84px)] bg-white font-default overflow-hidden">
       
       {/* Left Text */}
       <div className="pl-[140px] z-10 relative flex flex-col justify-center h-full">
