@@ -4,6 +4,7 @@ import Testimonials from './sections/home/Testimonials'
 import WhoAreWe from './sections/home/WhoAreWe'
 import WhyUs from './sections/home/WhyUs'
 import Courses from './sections/home/Courses'
+import Workshop from './sections/home/Workshop'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <WhoAreWe />
       <WhyUs />
       <Courses />
+      <Workshop />
     </>
   )
 }

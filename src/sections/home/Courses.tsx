@@ -33,7 +33,7 @@ const Courses: FC = () => {
         </ul>
       </div>
       <button className="bg-primary text-white px-4 py-2 rounded-full flex hover:scale-105 transition-transform duration-300 cursor-pointer">
-        Join our free demo class »
+        Join our free demo class<span className="tracking-tighter font-mono pl-1">&gt;&gt;</span>
       </button>
     </div>
 
@@ -52,7 +52,7 @@ const Courses: FC = () => {
         </ul>
       </div>
       <button className="border mt-7 border-purple-600 text-purple-600 px-2 rounded-full w-max cursor-pointer hover:bg-purple-600 hover:text-white transition duration-300">
-        Contact our team »
+        Contact our team<span className="tracking-tighter font-mono pl-1">&gt;&gt;</span>
       </button>
     </div>
   </div>
