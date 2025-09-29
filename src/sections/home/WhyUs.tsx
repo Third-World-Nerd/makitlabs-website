@@ -9,7 +9,13 @@ export default function WhyUs() {
   const activeTab = whyus.find((t) => t.id === active)!;
 
   return (
-<section className="mx-[140px] my-[120px] px-10 py-10 rounded-4xl bg-[#5E07E1]/4 font-default">
+<section className="mx-[340px] mt-[150px]  font-default">
+      <div className="text-center mb-16">
+        <h2 className="text-7xl">
+          Why <span className="text-primary font-bold">Us</span>
+        </h2>
+      </div>
+      <div className="px-10 py-10  rounded-4xl bg-[#5E07E1]/4">
       {/* Top Row - whyus */}
       <div className="flex justify-around border-b-4 border-white">
         {whyus.map((tab) => (
@@ -36,13 +42,13 @@ export default function WhyUs() {
     </h4>
     <h2 className="text-7xl mb-4">
       {activeTab.title.split(" ")[0]}{" "}
-      <span className="text-purple-600 font-bold">
+      <span className="text-primary font-bold">
         {activeTab.title.split(" ")[1]}
       </span>
     </h2>
     <p className="text-gray-800 mb-6">{activeTab.description}</p>
     <button className="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:scale-105 transition-transform duration-300 cursor-pointer">
-      {activeTab.button} <span className="ml-2">&gt;&gt;</span>
+      {activeTab.button}<span className="tracking-tighter font-mono pl-2">&gt;&gt;</span>
     </button>
   </div>
 
@@ -55,6 +61,8 @@ export default function WhyUs() {
     />
   </div>
 </div>
+      </div>
+
 
     </section>
   );

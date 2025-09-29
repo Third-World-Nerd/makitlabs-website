@@ -2,14 +2,14 @@ import type {FC} from 'react'
 
 const Courses: FC = () => {
     return (
-<section className="px-[140px] py-20 font-default bg-white">
+<section className="px-[140px] mt-[230px] font-default bg-white">
   {/* Heading */}
   <div className="text-center mb-12">
-    <h4 className="uppercase text-purple-400 font-semibold tracking-wide mb-2">
+    <h4 className="uppercase text-primary/40 tracking-wide mb-2">
       Our Courses
     </h4>
     <h2 className="text-5xl font-bold">
-      Find the <span className="text-purple-600">right plan</span>
+      Find the <span className="text-primary">right plan</span>
     </h2>
   </div>
 

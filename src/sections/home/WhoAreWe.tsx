@@ -2,7 +2,7 @@ import { whoarewe } from "../../assets/copies";
 
 const WhoAreWe: React.FC = () => {
   return (
-    <section className="w-full px-[140px] flex flex-col lg:flex-row gap-12 mt-[120px]">
+    <section className="w-full px-[340px] flex flex-col lg:flex-row gap-12 mt-[190px]">
       {/* Left Column */}
       <div className="flex flex-col lg:flex-row gap-7">
         {/* First Column (Tall Image + Button) */}
@@ -58,7 +58,7 @@ const WhoAreWe: React.FC = () => {
         </p>
         <span>CEO, Makit Labs</span>
         <button className="border mt-7 border-purple-600 text-purple-600 px-2 rounded-full w-max cursor-pointer hover:bg-purple-600 hover:text-white transition duration-300">
-          Contact Us Directly &gt;&gt;
+          Contact Us Directly<span className="tracking-tighter font-mono pl-2">&gt;&gt;</span>
         </button>
       </div>
     </section>

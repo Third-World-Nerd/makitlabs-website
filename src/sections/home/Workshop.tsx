@@ -2,7 +2,7 @@ import type {FC} from 'react'
 
 const Workshop: FC = ()=>{
     return(
-        <section className="px-[140px] py-20 font-default bg-white">
+        <section className="px-[340px] mt-[200px] font-default bg-white">
   <div className="flex items-center gap-12">
     {/* Left Side */}
     <div className="w-[60%]">

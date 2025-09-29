@@ -3,14 +3,14 @@ import { testimonials } from "../../assets/testimonials";
 
 function Testimonials() {
   return (
-    <section className="flex flex-col items-center w-full mt-[180px]">
+    <section className="flex flex-col items-center w-full my-[180px]">
       <span className="text-xl font-default text-[rgba(94,7,225,0.4)]">
         Testimonials
       </span>
       <h1 className="text-7xl text-default leading-tight font-default mb-[20px]">
         Words from our <span className="text-primary font-bold whitespace-nowrap">Clients</span>
       </h1>
-      <div className="w-full overflow-hidden relative">
+      <div className="mt-[60px] w-full overflow-hidden relative">
         <style>
           {`
             @keyframes marquee {

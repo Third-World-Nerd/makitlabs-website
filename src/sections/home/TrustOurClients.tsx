@@ -17,7 +17,7 @@ const TrustOurClients: FC = () => {
   const column3 = reviews.filter((_, i) => i % 3 === 2);
 
   return (
-    <section className="px-[440px] py-20 font-default bg-white relative">
+    <section className="px-[440px] mt-[240px] font-default bg-white relative mb-[200px]">
       {/* Section Header */}
       <div className="text-center mb-16">
         <h2 className="text-7xl">
