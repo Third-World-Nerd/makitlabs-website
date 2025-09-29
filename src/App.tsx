@@ -5,6 +5,7 @@ import WhoAreWe from './sections/home/WhoAreWe'
 import WhyUs from './sections/home/WhyUs'
 import Courses from './sections/home/Courses'
 import Workshop from './sections/home/Workshop'
+import TrustOurClients from './sections/home/TrustOurClients'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <WhyUs />
       <Courses />
       <Workshop />
+      <TrustOurClients />
     </>
   )
 }
