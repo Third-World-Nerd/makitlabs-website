@@ -80,7 +80,7 @@ const Hero: FC = () => {
         </svg>
 
         <img
-          src="/photo/illustrations/100+ Students.png"
+          src="/photo/illustrations/100 plus students.png"
           alt="Decorative"
           className="absolute bottom-[3%] left-[40%] drop-shadow-lg transition-transform duration-300 group-hover:-translate-x-3 group-hover:-translate-y-3"
         />
