@@ -70,7 +70,7 @@ function Testimonials() {
   const handleTouchEnd = () => setIsDragging(false);
 
   return (
-    <section className="flex flex-col items-center w-full mt-[180px]">
+    <section className="px-[5%] md:px-[15%] flex flex-col sm:items-center w-full mt-[180px]">
       <span className="text-xl font-default text-[rgba(94,7,225,0.4)]">
         Testimonials
       </span>
