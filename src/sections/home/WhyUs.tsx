@@ -9,9 +9,9 @@ export default function WhyUs() {
   const activeTab = whyus.find((t) => t.id === active)!;
 
   return (
-<section className="mx-[340px] mt-[150px]  font-default">
+<section className="mx-[5%] md:mx-[10%] mt-[150px]  font-default">
       <div className="text-center mb-16">
-        <h2 className="text-7xl">
+        <h2 className="text-4xl lg:text-7xl">
           Why <span className="text-primary font-bold">Us</span>
         </h2>
       </div>
@@ -34,13 +34,13 @@ export default function WhyUs() {
       </div>
 
 {/* Bottom Row - Content */}
-<div className="flex gap-10 mt-5 items-center">
+<div className="flex gap-10 mt-5 items-center flex-col md:flex-row">
   {/* Left side */}
-  <div className="w-[70%]">
+  <div className="md:w-[70%]">
     <h4 className="text-sm text-primary/40 uppercase mb-2">
       Why Us
     </h4>
-    <h2 className="text-7xl mb-4">
+    <h2 className="text-4xl lg:text-7xl mb-4">
       {activeTab.title.split(" ")[0]}{" "}
       <span className="text-primary font-bold">
         {activeTab.title.split(" ")[1]}
@@ -53,7 +53,7 @@ export default function WhyUs() {
   </div>
 
   {/* Right side - graphic */}
-  <div className="w-[30%] h-[200px] flex justify-end">
+  <div className="md:w-[30%] h-[200px] flex justify-end">
     <img
       src={activeTab.image}
       alt={activeTab.title}

@@ -2,9 +2,9 @@ import { whoarewe } from "../../assets/copies";
 
 const WhoAreWe: React.FC = () => {
   return (
-    <section className="w-full px-[340px] flex flex-col lg:flex-row gap-12 mt-[190px]">
+    <section className="w-full px-[5%] md:px-[15%] lg:px-[25%] 2xl:px-[10%] flex flex-col 2xl:flex-row sm:gap-12 md:mt-[190px] sm:mt-[90px]">
       {/* Left Column */}
-      <div className="flex flex-col lg:flex-row gap-7">
+      <div className="flex flex-row gap-7 justify-center scale-60 sm:scale-90 md:scale-100">
         {/* First Column (Tall Image + Button) */}
         <div className="flex flex-col gap-8">
           <img
@@ -49,7 +49,7 @@ const WhoAreWe: React.FC = () => {
       {/* Right Column (Text Content) */}
       <div className="flex-1 flex flex-col font-default">
         <p className="text-[rgba(94,7,225,0.4)] uppercase text-sm ">About Us</p>
-        <h2 className="text-7xl mb-[20px]">
+        <h2 className="mb-[20px] text-4xl lg:text-7xl">
           Who are <span className="text-primary font-bold">we</span>
         </h2>
         <p className ="text-gray-800" dangerouslySetInnerHTML={{ __html: whoarewe }} />

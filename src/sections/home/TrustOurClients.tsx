@@ -6,57 +6,69 @@ import { useState } from "react";
 const TrustOurClients: FC = () => {
   const [showAll, setShowAll] = useState(false);
 
-  // Set a massive value that guarantees all content will fit.
   const expandedMaxHeight = "max-h-[5000px]";
-  // Define the height of the initially visible content (e.g., two rows of cards).
   const visibleMaxHeight = "max-h-[600px]"; 
 
-  // 1. Divide reviews into three columns
-  const column1 = reviews.filter((_, i) => i % 3 === 0);
-  const column2 = reviews.filter((_, i) => i % 3 === 1);
-  const column3 = reviews.filter((_, i) => i % 3 === 2);
+  // Split reviews into 2 columns
+  const col2_1 = reviews.filter((_, i) => i % 2 === 0);
+  const col2_2 = reviews.filter((_, i) => i % 2 === 1);
+
+  // Split reviews into 3 columns
+  const col3_1 = reviews.filter((_, i) => i % 3 === 0);
+  const col3_2 = reviews.filter((_, i) => i % 3 === 1);
+  const col3_3 = reviews.filter((_, i) => i % 3 === 2);
 
   return (
-    <section className="px-[440px] mt-[240px] font-default bg-white relative mb-[200px]">
+    <section className="px-[5%] 2xl:px-[15%] mt-[240px] font-default bg-white relative mb-[200px]">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="text-7xl">
+        <h2 className="text-4xl lg:text-7xl">
           Trust our <span className="text-primary font-bold">Clients</span>
         </h2>
       </div>
 
-      {/* Main Grid Wrapper with fade mask */}
+      {/* Main Grid Wrapper */}
       <div className="relative">
         <div
-          // Use flex to display columns horizontally, enables masonry effect.
           className={`flex gap-8 overflow-hidden transition-all duration-700 ease-in-out ${
             showAll ? expandedMaxHeight : `${visibleMaxHeight}`
           }`}
         >
-          {/* Column 1 (Left): Starts lower (lg:mt-20) */}
-          <div className="w-1/3 flex flex-col gap-8 mt-0 lg:mt-20"> 
-            {column1.map((t, i) => (
-              <ReviewCard key={i} review={t} />
-            ))}
+          {/* --- 2 Columns (below lg) --- */}
+          <div className="flex w-full gap-8 lg:hidden">
+            <div className="w-1/2 flex flex-col gap-8">
+              {col2_1.map((t, i) => (
+                <ReviewCard key={i} review={t} />
+              ))}
+            </div>
+            <div className="w-1/2 flex flex-col gap-8">
+              {col2_2.map((t, i) => (
+                <ReviewCard key={i} review={t} />
+              ))}
+            </div>
           </div>
 
-          {/* Column 2 (Middle): Starts at the top (mt-0) */}
-          <div className="w-1/3 flex flex-col gap-8">
-            {column2.map((t, i) => (
-              <ReviewCard key={i} review={t} />
-            ))}
+          {/* --- 3 Columns (lg and above) --- */}
+          <div className="hidden lg:flex w-full gap-8">
+            <div className="w-1/3 flex flex-col gap-8 lg:mt-20">
+              {col3_1.map((t, i) => (
+                <ReviewCard key={i} review={t} />
+              ))}
+            </div>
+            <div className="w-1/3 flex flex-col gap-8">
+              {col3_2.map((t, i) => (
+                <ReviewCard key={i} review={t} />
+              ))}
+            </div>
+            <div className="w-1/3 flex flex-col gap-8 lg:mt-20">
+              {col3_3.map((t, i) => (
+                <ReviewCard key={i} review={t} />
+              ))}
+            </div>
           </div>
-
-          {/* Column 3 (Right): Starts lower (lg:mt-20) */}
-          <div className="w-1/3 flex flex-col gap-8 mt-0 lg:mt-20">
-            {column3.map((t, i) => (
-              <ReviewCard key={i} review={t} />
-            ))}
-          </div>
-
         </div>
 
-        {/* Gradient overlay when clipped */}
+        {/* Gradient overlay */}
         {!showAll && (
           <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white to-transparent pointer-events-none" />
         )}

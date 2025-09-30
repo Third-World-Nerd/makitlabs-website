@@ -10,8 +10,8 @@ interface Props {
 
 const ReviewCard: FC<Props> = ({ review }) => {
   return (
-    <div className="font-default rounded-xl shadow-lg shadow-primary/6 p-6 flex flex-col items-center text-center transition-transform duration-500 hover:-translate-y-2">
-        <span className="flex items-center text-gray-800">
+    <div className="font-default rounded-xl shadow-lg shadow-primary/6 p-1 lg:p-6 flex flex-col items-center text-center transition-transform duration-500 hover:-translate-y-2">
+        <span className="flex items-center text-gray-800 text-sm lg:text-base">
           <div className="p-1.5 bg-[#EADDFF] rounded-full mr-3">
             <UserIcon className="w-5 h-5 text-[#4F378A]" />
           </div>
@@ -19,7 +19,7 @@ const ReviewCard: FC<Props> = ({ review }) => {
         </span>
 
       {/* Quote */}
-        <p className="text-primary mb-4 bg-white p-2 rounded-2xl shadow-lg shadow-primary/2">“{review.quote}”</p>
+        <p className="text-primary mb-4 bg-white p-2 rounded-2xl shadow-lg shadow-primary/2 text-sm lg:text-base">“{review.quote}”</p>
       
 
       {/* Rating */}
@@ -31,7 +31,7 @@ const ReviewCard: FC<Props> = ({ review }) => {
               idx < Math.round(review.rating)
                 ? "text-primary"
                 : "text-gray-300"
-            } w-4 h-4 fill-primary`}
+            } w-3 h-3 lg:w-4 lg:h-4 fill-primary`}
           >
           </Star>
         ))}

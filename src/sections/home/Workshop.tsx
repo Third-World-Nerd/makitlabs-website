@@ -2,14 +2,14 @@ import type {FC} from 'react'
 
 const Workshop: FC = ()=>{
     return(
-        <section className="px-[340px] mt-[200px] font-default bg-white">
-  <div className="flex items-center gap-12">
+        <section className="px-[5%] md:px-[15%] mt-[200px] font-default bg-white">
+  <div className="flex gap-12 md:flex-row flex-col items-center">
     {/* Left Side */}
-    <div className="w-[60%]">
+    <div className="md:w-[60%]">
       <h4 className="uppercase text-primary/40 tracking-wide mb-2">
         Workshop
       </h4>
-      <h2 className="text-7xl mb-6">
+      <h2 className="mb-6 text-4xl lg:text-7xl">
         Our <span className="text-primary font-bold">workshop</span>
       </h2>
       <p className="text-gray-800 mb-6">
@@ -37,7 +37,7 @@ const Workshop: FC = ()=>{
     </div>
 
     {/* Right Side */}
-    <div className="relative h-[400px] w-[40%] flex justify-end group">
+    <div className="relative h-[400px] w-full md:w-[40%] flex justify-end group">
       <img
         src="src/assets/photo/Sayog Rai.jpg"
         alt="Workshop"
@@ -46,11 +46,11 @@ const Workshop: FC = ()=>{
         <img
             src="src/assets/100+ Students.png"
             alt="Decorative"
-            className="absolute bottom-[-10%] left-[70%] drop-shadow-lg transition-transform duration-1000 group-hover:translate-x-10 group-hover:translate-y-10"
+            className="absolute bottom-[-10%] left-[30%] md:bottom-[-10%] md:left-[70%] drop-shadow-lg transition-transform duration-1000 group-hover:translate-x-10 group-hover:translate-y-10"
         />
 
         <button
-            className="absolute bottom-[80%] left-[-15%] text-primary opacity-90 rounded-md bg-[rgba(250,250,250,0.6)] px-4 py-2 drop-shadow-lg transition-transform duration-1000 group-hover:-translate-x-10 group-hover:-translate-y-10"
+            className="absolute bottom-[95%] left-0 md:bottom-[80%] md:left-[-15%] text-primary opacity-90 rounded-md bg-[rgba(250,250,250,0.6)] px-4 py-2 drop-shadow-lg transition-transform duration-1000 group-hover:-translate-x-10 group-hover:-translate-y-10"
         >
             10 Workshops
         </button>

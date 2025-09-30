@@ -5,21 +5,21 @@ const Hero: FC = () => {
     <section className="relative top-[84px] h-[calc(100vh-84px)] bg-white font-default overflow-hidden">
       
       {/* Left Text */}
-      <div className="pl-[140px] z-10 relative flex flex-col justify-center h-full">
-        <h1 className="text-7xl text-default leading-tight">
+      <div className="pl-[8%] lg:z-10 md:relative flex flex-col md:justify-center md:h-full items-start">
+        <h1 className="text-4xl sm:text-5xl pt-[20px] lg:text-5xl xl:text-6xl 2xl:text-7xl text-default leading-tight">
           Stop just <span className="text-primary font-bold whitespace-nowrap">watching</span><br />
-          Robots.<br />
+          Robots.<br /> 
           Start <span className="text-primary font-bold">making</span> it.
         </h1>
         <span>
-        <button className="mt-10 bg-primary text-white text-xl px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+        <button className="mt-10 bg-primary text-white 2xl:text-xl px-4 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
           Join our free demo class &gt;&gt;
         </button>
         </span>
 
-        <p className="mt-16 text-default text-textDefaultColor font-medium">
+        <p className="mt-6 md:mt-16 text-default text-textDefaultColor font-medium">
           Trusted by
-          <div className="flex items-center mt-2 space-x-4">
+          <div className="flex items-center space-x-4">
             <img src="src/assets/trustedBy/CIC Logo.png" alt="Logo 1" className="h-14 w-auto object-contain" />
             <img src="src/assets/trustedBy/IEEE Logo.png" alt="Logo 2" className="h-15 w-auto object-contain" />
             <img src="src/assets/trustedBy/KCMIT Logo.png" alt="Logo 3" className="h-15 w-auto object-contain" />
@@ -29,7 +29,7 @@ const Hero: FC = () => {
       </div>
 
       {/* Blob Video on Right */}
-      <div className="absolute top-0 right-0 h-full w-auto group">
+      <div className="group absolute top-45 -right-52 md:top-0 md:-right-60 lg:-right-20 2xl:right-0 h-full w-auto scale-40  lg:scale-70 xl:scale-80 2xl:scale-100">
         <svg
           viewBox="0 0 570 557"
           className="h-full w-auto pointer-events-none"
@@ -94,7 +94,7 @@ const Hero: FC = () => {
         <img
           src="src/assets/star.png"
           alt="Decorative"
-          className="absolute top-[5%] left-[20%] drop-shadow-lg w-12 h-12 transition-transform duration-300 group-hover:translate-x-4 group-hover:-translate-y-4"
+          className="absolute top-[5%] left-[20%] drop-shadow-lg w-12 h-12 transition-transform duration-300 group-hover:translate-x-4 group-hover:-translate-y-14"
         />
       </div>
     </section>
