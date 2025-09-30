@@ -48,7 +48,10 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           {/* Replaced image with a placeholder for reliable display in this environment */}
-   <img src="/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className=" h-24 sm:h-36 w-auto" />
+          <div className="bg-purple-600 h-10 w-24 sm:h-12 sm:w-32 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+            Makit Labs
+          </div>
+          {/* Original: <img src="/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className=" h-24 sm:h-36 w-auto" /> */}
         </div>
 
         {/* Desktop Links (Hidden on Mobile) */}
