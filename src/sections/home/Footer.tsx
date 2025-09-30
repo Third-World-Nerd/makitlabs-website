@@ -1,6 +1,6 @@
 import type { FC } from "react";
 // Assuming you have SVG icons for social media (e.g., from lucide-react or similar)
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube} from 'lucide-react'; 
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube} from 'lucide-react'; 
 
 const Footer: FC = () => {
   return (
