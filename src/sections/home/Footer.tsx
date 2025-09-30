@@ -7,7 +7,7 @@ const Footer: FC = () => {
     <footer className="relative bg-gray-900 text-white font-default flex flex-col items-center">
       
       {/* 1. Top CTA Banner (Purple Bar) */}
-      <div className="absolute z-10 -mt-20 px-[5%] 2xl:px-[15%]"> 
+      <div className="absolute z-10 -mt-30 px-[5%] 2xl:px-[15%]"> 
         <div className="bg-primary py-10 px-10 rounded-3xl shadow-2xl flex flex-col items-center justify-center text-center">
           <h2 className="text-4xl xl:text-7xl mb-8 text-white">
             Want to know more? <span className="font-bold">Let's chat</span>
@@ -21,18 +21,13 @@ const Footer: FC = () => {
       </div>
 
       {/* 2. Main Footer Content (Columns) */}
-      <div className="pt-62 pb-16 px-[5%] 2xl:px-[15%] text-gray-400">
+      <div className="pt-50 pb-16 px-[5%] 2xl:px-[15%] text-gray-400">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           
           {/* Column 1: Logo and About/Services */}
           <div>
-            <div className="flex items-center mb-6">
-              {/* Logo/Image Placeholder */}
-              <div className="w-8 h-8 mr-2 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-lg">
-                M
-              </div>
-              <span className="text-2xl font-bold text-white">MAKIT <span className="text-orange-500">LABS</span></span>
-            </div>
+
+            <img src="src/assets/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className="items-start h-36" />
 
             <p className="mb-4 text-sm">
               In short we are a group of Engineers and Educators who provide:
@@ -103,11 +98,16 @@ const Footer: FC = () => {
           <div>
             <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden relative">
               {/* Placeholder Image/Video Thumbnail */}
-              <img 
-                src="https://via.placeholder.com/300x200?text=Video+Placeholder" // Replace with a real video thumbnail URL
-                alt="Students working on a project" 
-                className="w-full h-full object-cover opacity-70"
-              />
+              <div className="w-full max-w-3xl mx-auto aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/0DCpCSC6Efc"
+                  title="Students working on a project"
+                  className="w-full h-full rounded-lg"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+
               {/* Play Button Overlay - Centralized */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-12 h-12 text-white fill-current opacity-90 hover:opacity-100 transition cursor-pointer" viewBox="0 0 24 24">

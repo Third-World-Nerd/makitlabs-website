@@ -8,13 +8,13 @@ const WhoAreWe: React.FC = () => {
         {/* First Column (Tall Image + Button) */}
         <div className="flex flex-col gap-8">
           <img
-            src="src/assets/photo/Who are we 1.png"
+            src="src/assets/photo/whoAreWe/Who are we 1.png"
             alt="Student Project"
             className="h-[446px] w-[263px] rounded-t-4xl rounded-bl-4xl object-cover"
           />
           <div className="flex items-center p-3 gap-4 w-[263px] rounded-t-4xl rounded-br-4xl shadow-lg text-sm font-medium shadow-purple-200">
             <img
-            src="src/assets/TWN.png"
+            src="src/assets/photo/logo/TWN.png"
               alt="Third World Nerd"
               className=""
             />
@@ -29,14 +29,14 @@ const WhoAreWe: React.FC = () => {
         <div className="w-[300px] h-[300px] overflow-hidden rounded-full">
           {/* Circular Image */}
           <img
-            src="src/assets/photo/Who are we 3.png"
+            src="src/assets/photo/whoAreWe/Who are we 3.png"
             alt="Student Robotics"
             className="scale-180 transform translate-y-12 translate-x-12 object-cover h-full w-full rounded-full"
           />
         </div>
           <div className="w-[263px] h-[263px] overflow-hidden rounded-b-4xl rounded-tr-4xl">
             <img
-              src="src/assets/photo/Who are we 2.png"
+              src="src/assets/photo/whoAreWe/Who are we 2.png"
               alt="Student Robotics"
               className="scale-150 transform -translate-y-10 object-cover h-full w-full"
             />

@@ -21,7 +21,7 @@ export const whyus: WhyUs[] = [
     description:
       "Our teachers are engineers themselves. They will teach you how to approach a problem, so you can find the solutions to every similar problem on your own.",
     button: "Join our free demo class",
-    image: "src/assets/teachers.png",
+    image: "src/assets/photo/illustrations/teachers.png",
   },
   {
     id:"second",
@@ -29,7 +29,7 @@ export const whyus: WhyUs[] = [
     description:
       "Our personalized kits and ready-to-use coding templates makes sure you don’t get stuck on tiny things like missing screws, tangled wires or incomaptible modules.",
     button: "Explore our kits",
-    image: "src/assets/kits.png",
+    image: "src/assets/photo/illustrations/kits.png",
   },
   {
     id:"third",
@@ -37,7 +37,7 @@ export const whyus: WhyUs[] = [
     description:
       "We know everyone thinks and learns differently. So, at Makit Labs, you don’t enroll into a curriculum, we tailor your syllabus and design our teaching resources based on your needs and interests.",
     button: "Explore curriculum",
-    image: "src/assets/curriculum.png",
+    image: "src/assets/photo/illustrations/curriculum.png",
   },
   {
     id:"fourth",
@@ -45,6 +45,6 @@ export const whyus: WhyUs[] = [
     description:
       "Join a network of like-minded learners and mentors who inspire and help each other grow in their journey.",
     button: "Meet our community",
-    image: "src/assets/community.png",
+    image: "src/assets/photo/illustrations/community.png",
   },
 ];
