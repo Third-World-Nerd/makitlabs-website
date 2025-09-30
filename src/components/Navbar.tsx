@@ -30,7 +30,11 @@ const Navbar: React.FC = () => {
             <NavLink href="#">About Us</NavLink>
             <NavLink href="#">Courses</NavLink>
             <NavLink href="#">Products</NavLink>
-            <NavLink href="#">+977-9841671676</NavLink>
+            <a 
+            className='text-primary text-xl hover:scale-110 cursor-pointer transition duration-300'
+            href='https://wa.me/9779767470587?text=I%20saw%20your%20website%20and%20want%20to%20know%20more%20about%20your%20services.'
+            target='_blank'
+            >+977-9767470587</a>
             <button className="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:scale-105 transition-transform duration-300 cursor-pointer">
             <span>Enroll Now</span>
             <span className="tracking-tighter font-mono">&gt;&gt;</span>
@@ -56,7 +60,11 @@ const Navbar: React.FC = () => {
               <NavLink href="#">About Us</NavLink>
               <NavLink href="#">Courses</NavLink>
               <NavLink href="#">Products</NavLink>
-              <NavLink href="#">+977-9841671676</NavLink>
+              <a 
+              className='text-primary text-xl hover:scale-110 cursor-pointer transition duration-300'
+              href='https://wa.me/9779767470587?text=I%20saw%20your%20website%20and%20want%20to%20know%20more%20about%20your%20services.'
+              target='_blank'
+              >+977-9767470587</a>
             </div>
             <button className="bg-primary text-white px-4 py-2 rounded-full space-x-2 hover:scale-105 transition-transform duration-300 cursor-pointer">
             <span>Enroll Now</span><span className="tracking-tighter font-mono">&gt;&gt;</span></button>    

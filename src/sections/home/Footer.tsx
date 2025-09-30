@@ -1,6 +1,6 @@
 import type { FC } from "react";
 // Assuming you have SVG icons for social media (e.g., from lucide-react or similar)
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react'; 
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube} from 'lucide-react'; 
 
 const Footer: FC = () => {
   return (
@@ -64,33 +64,44 @@ const Footer: FC = () => {
           <div className="col-span-1">
             {/* Contact Us */}
             <h3 className="text-white text-lg font-semibold mb-6">Contact Us</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center">
+            <ul className="space-y-3 text-sm ">
+              <li className="flex items-center hover:text-white transition">
                 <Phone className="w-4 h-4 mr-2 text-white" />
-                <span>+977-9841671676</span>
+                <a
+                href="https://wa.me/9779767470587?text=I%20saw%20your%20website%20and%20want%20to%20know%20more%20about%20your%20services."
+                target="_blank"
+                >+977-9767470587</a>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center hover:text-white transition">
                 <Mail className="w-4 h-4 mr-2 text-white" />
-                <span>makitnepal@gmail.com</span>
+                <a
+                href="mailto:makitnepal@gmail.com"
+                target="_blank"
+                >makitnepal@gmail.com</a>
               </li>
               {/* Social Icons */}
               <li className="flex space-x-4 pt-2">
-                <a href="#" aria-label="Facebook" className="hover:text-white transition"><Facebook className="w-5 h-5" /></a>
-                <a href="#" aria-label="Twitter" className="hover:text-white transition"><Twitter className="w-5 h-5" /></a>
-                <a href="#" aria-label="Instagram" className="hover:text-white transition"><Instagram className="w-5 h-5" /></a>
-                <a href="#" aria-label="YouTube" className="hover:text-white transition"><Youtube className="w-5 h-5" /></a>
+                <a href="https://facebook.com/61575099465786" target="_blank" aria-label="Facebook" className="hover:text-white transition"><Facebook className="w-5 h-5" /></a>
+                <a href="https://instagram.com/makit.labs" target="_blank" aria-label="Instagram" className="hover:text-white transition"><Instagram className="w-5 h-5" /></a>
+                <a href="https://tiktok.com/@makit.labs" target="_blank" aria-label="Tiktok" className="hover:text-white transition">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 448 512"> <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" /></svg>
+                </a>
+                <a href="https://youtube.com/@thirdworldnerd" target="_blank" aria-label="YouTube" className="hover:text-white transition"><Youtube className="w-5 h-5" /></a>
               </li>
             </ul>
             
             {/* Location */}
             <h3 className="text-white text-lg font-semibold mt-8 mb-4">Location</h3>
-            <div className="flex text-sm">
+            <div className="flex text-sm hover:text-white transition">
                 <MapPin className="w-4 h-4 mr-2 text-white flex-shrink-0 mt-1" />
-                <p>
+                <a
+                href="https://maps.app.goo.gl/nEoqWGoAAeWnZZ6R7"
+                target="_blank"
+                >
                     Cosmic Innovation Center<br/>
                     Sanepa Marg, Kathmandu<br/>
                     Opposite to Norwegian Embassy
-                </p>
+                </a>
             </div>
           </div>
 
