@@ -1,6 +1,9 @@
 import type { FC } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const Hero: FC = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative top-[84px] h-[calc(100vh-84px)] bg-white font-default overflow-hidden">
       
@@ -12,7 +15,9 @@ const Hero: FC = () => {
           Start <span className="text-primary font-bold">making</span> it.
         </h1>
         <span>
-        <button className="mt-10 bg-primary text-white 2xl:text-xl px-4 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+        <button className="mt-10 bg-primary text-white 2xl:text-xl px-4 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+        onClick={()=>{navigate("/form")}}
+        >
           Join our free demo class &gt;&gt;
         </button>
         </span>

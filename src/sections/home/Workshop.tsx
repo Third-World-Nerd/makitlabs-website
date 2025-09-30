@@ -1,6 +1,10 @@
 import type {FC} from 'react'
+import { useNavigate } from "react-router-dom";
+
 
 const Workshop: FC = ()=>{
+const navigate = useNavigate();
+
     return(
         <section className="px-[5%] md:px-[15%] mt-[200px] font-default bg-white">
   <div className="flex gap-12 md:flex-row flex-col items-center">
@@ -31,7 +35,8 @@ const Workshop: FC = ()=>{
         the complete details of the bootcamp and our proof of work.
       </p>
 
-      <button className="bg-primary text-white mt-15 px-4 py-2 rounded-full flex items-center space-x-2 hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <button className="bg-primary text-white mt-15 px-4 py-2 rounded-full flex items-center space-x-2 hover:scale-105 transition-transform duration-300 cursor-pointer"
+      onClick={()=>navigate("/form")}>
         Contact Our Team »
       </button>
     </div>

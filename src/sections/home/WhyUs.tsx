@@ -2,8 +2,12 @@ import { whyus } from "../../assets/copies";
 
 import { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 
 export default function WhyUs() {
+  const navigate = useNavigate();
+
   const [active, setActive] = useState("first");
 
   const activeTab = whyus.find((t) => t.id === active)!;
@@ -47,7 +51,8 @@ export default function WhyUs() {
       </span>
     </h2>
     <p className="text-gray-800 mb-6">{activeTab.description}</p>
-    <button className="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:scale-105 transition-transform duration-300 cursor-pointer">
+    <button className="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:scale-105 transition-transform duration-300 cursor-pointer"
+    onClick={()=>{navigate("/form")}}>
       {activeTab.button}<span className="tracking-tighter font-mono pl-2">&gt;&gt;</span>
     </button>
   </div>

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
+
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   
   // FIX #2 PART A: Lock body scroll when menu is open to keep the header fixed.
@@ -48,7 +51,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           {/* Replaced image with a placeholder for reliable display in this environment */}
-   <img src="/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className=" h-24 sm:h-36 w-auto" />
+   <img src="/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className=" w-24 sm:w-32 h-auto" />
         </div>
 
         {/* Desktop Links (Hidden on Mobile) */}
@@ -66,7 +69,8 @@ const Navbar: React.FC = () => {
           >+977-9767470587</a>
           
           {/* Enroll Button */}
-          <button className="bg-purple-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:scale-105 transition-transform duration-300 shadow-md">
+          <button className="bg-purple-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:scale-105 transition-transform duration-300 shadow-md cursor-pointer"
+          onClick={()=>{navigate("/form")}}>
             <span>Enroll Now</span>
             <span className="tracking-tighter font-mono">&gt;&gt;</span>
           </button>
@@ -118,8 +122,8 @@ const Navbar: React.FC = () => {
               >+977-9767470587</a>
           
               <button 
-                  className="bg-purple-600 text-white px-4 py-2 rounded-full space-x-2 hover:scale-105 transition-transform duration-300 shadow-md w-full"
-                  onClick={() => { /* Handle enroll logic */ setIsOpen(false); }}
+                  className="bg-purple-600 text-white px-4 py-2 rounded-full space-x-2 hover:scale-105 transition-transform duration-300 shadow-md w-full cursor-pointer"
+                  onClick={() => { /* Handle enroll logic */ setIsOpen(false); navigate("/form"); }}
               >
                   <span>Enroll Now</span><span className="tracking-tighter font-mono pl-2">&gt;&gt;</span>
               </button> 

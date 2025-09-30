@@ -1,6 +1,9 @@
 import { whoarewe } from "../../assets/copies";
+import { useNavigate } from "react-router-dom";
 
 const WhoAreWe: React.FC = () => {
+
+  const navigate = useNavigate();
   return (
     <section id="WhoAreWe" className="w-full px-[5%] md:px-[15%] lg:px-[25%] 2xl:px-[10%] flex flex-col 2xl:flex-row sm:gap-12 md:pt-[150px] sm:pt-[90px]">
       {/* Left Column */}
@@ -57,7 +60,8 @@ const WhoAreWe: React.FC = () => {
           Sakar Pathak (Er. Kumar from Third World Nerd)
         </p>
         <span>CEO, Makit Labs</span>
-        <button className="border mt-7 border-purple-600 text-purple-600 px-2 rounded-full w-max cursor-pointer hover:bg-purple-600 hover:text-white transition duration-300">
+        <button className="border mt-7 border-purple-600 text-purple-600 px-2 rounded-full w-max cursor-pointer hover:bg-purple-600 hover:text-white transition duration-300"
+        onClick={()=>{navigate("/form")}}>
           Contact Us Directly<span className="tracking-tighter font-mono pl-2">&gt;&gt;</span>
         </button>
       </div>

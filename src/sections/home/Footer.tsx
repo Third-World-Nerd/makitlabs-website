@@ -1,8 +1,12 @@
 import type { FC } from "react";
+import { useNavigate } from "react-router-dom";
+
 // Assuming you have SVG icons for social media (e.g., from lucide-react or similar)
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube} from 'lucide-react'; 
 
 const Footer: FC = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="relative bg-gray-900 text-white font-default flex flex-col items-center">
       
@@ -14,6 +18,7 @@ const Footer: FC = () => {
           </h2>
           <button
             className="border mt-7 text-xl text-purple-600 bg-white px-4 py-2 rounded-full w-max cursor-pointer hover:bg-primary hover:text-white transition duration-300"
+            onClick={() => navigate("/form")}
           >
             Contact Our Team<span className="tracking-tighter font-mono pl-2">&gt;&gt;</span>
           </button>

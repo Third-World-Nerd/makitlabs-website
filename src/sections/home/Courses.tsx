@@ -1,6 +1,11 @@
 import type {FC} from 'react'
 
+import { useNavigate } from "react-router-dom";
+
+
 const Courses: FC = () => {
+const navigate = useNavigate();
+
     return (
 <section id="Courses" className="mx-[5%] md:mx-[10%] pt-[150px] font-default bg-white">
   {/* Heading */}
@@ -32,7 +37,8 @@ const Courses: FC = () => {
           <li className="flex items-center gap-2"><span className="text-primary">&#10003;</span> Access to our Kits in Class</li>
         </ul>
       </div>
-      <button className="text-sm w-fit lg:text-base mt-7 bg-primary text-white px-4 py-2 rounded-full flex hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <button className="text-sm w-fit lg:text-base mt-7 bg-primary text-white px-4 py-2 rounded-full flex hover:scale-105 transition-transform duration-300 cursor-pointer"
+      onClick={()=>{navigate("/form");}}>
         Join our free demo class<span className="tracking-tighter font-mono pl-1">&gt;&gt;</span>
       </button>
     </div>
@@ -51,7 +57,8 @@ const Courses: FC = () => {
           <li className="flex items-center gap-2"><span className="text-primary">&#10003;</span> Content Marketing For Institution</li>
         </ul>
       </div>
-      <button className="text-sm lg:text-base border mt-7 border-purple-600 text-purple-600 px-2 rounded-full w-max cursor-pointer hover:bg-purple-600 hover:text-white transition duration-300">
+      <button className="text-sm lg:text-base border mt-7 border-purple-600 text-purple-600 px-2 rounded-full w-max cursor-pointer hover:bg-purple-600 hover:text-white transition duration-300"
+      onClick={()=>navigate("/form")}>
         Contact our team<span className="tracking-tighter font-mono pl-1">&gt;&gt;</span>
       </button>
     </div>
