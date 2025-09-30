@@ -22,7 +22,7 @@ export default function WhyUs() {
           <button
             key={tab.id}
             onClick={() => setActive(tab.id)}
-            className={`pb-1 transition-colors cursor-pointer duration-300 delay-100 ${
+            className={`pb-1 text-sm sm:text-base transition-colors cursor-pointer duration-300 delay-100 ${
               active === tab.id
                 ? "text-[#5E07E1] border-b-4 border-[#5E07E1]/40"
                 : "text-[#5E07E1]/40 hover:text-[#5E07E1]/80"

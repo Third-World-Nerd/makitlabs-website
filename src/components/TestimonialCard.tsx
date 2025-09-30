@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Star } from "lucide-react";
+import { Star, StarHalf } from "lucide-react";
 
 interface CardProps {
   name: string;
@@ -58,12 +58,18 @@ const StudentCard: FC<CardProps> = ({
 
           {/* Stars */}
           <div className="flex mt-3 text-yellow-400">
-            {Array.from({ length: rating }).map((_, i) => (
+            {Array.from({ length: Math.floor(rating) }).map((_, i) => (
               <Star
                 key={i}
                 className="w-4 h-4 fill-yellow-400 stroke-yellow-400 ml-1"
               />
             ))}
+            {rating % 1 !== 0 && (
+              <StarHalf
+                key="half"
+                className="w-4 h-4 fill-yellow-400 stroke-yellow-400 ml-1"
+              />
+            )}
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import type { Review } from "../../src/assets/reviews";
 import { UserIcon } from "@heroicons/react/24/outline";
-import { Star } from "lucide-react";
+import { Star, StarHalf } from "lucide-react";
 
 
 interface Props {
@@ -35,6 +35,11 @@ const ReviewCard: FC<Props> = ({ review }) => {
           >
           </Star>
         ))}
+        {
+          review.rating % 1 !== 0 && (
+            <StarHalf className="text-primary w-3 h-3 lg:w-4 lg:h-4 fill-primary" />
+          )
+        }
       </div>
     </div>
   );
