@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
   );
 
   return (
-    <nav className="fixed z-50 w-full backdrop-blur-md px-[80px] py-[10px] font-default">
+    <nav className="fixed z-50 w-full backdrop-blur-md px-[4%] py-[10px] font-default">
         <div className="flex h-16 items-center justify-between">
             
           <div className="flex-shrink-0">

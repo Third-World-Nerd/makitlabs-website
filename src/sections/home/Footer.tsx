@@ -10,7 +10,7 @@ const Footer: FC = () => {
       <div className="absolute z-10 -mt-20 px-[5%] 2xl:px-[15%]"> 
         <div className="bg-primary py-10 px-10 rounded-3xl shadow-2xl flex flex-col items-center justify-center text-center">
           <h2 className="text-4xl xl:text-7xl mb-8 text-white">
-            Want to know more, <span className="font-bold">Let's chat</span>
+            Want to know more? <span className="font-bold">Let's chat</span>
           </h2>
           <button
             className="border mt-7 text-xl text-purple-600 bg-white px-4 py-2 rounded-full w-max cursor-pointer hover:bg-primary hover:text-white transition duration-300"
@@ -121,7 +121,7 @@ const Footer: FC = () => {
       </div>
 
       {/* 3. Copyright Section */}
-      <div className="border-t border-gray-800 py-6 px-[440px] text-center text-sm text-gray-500">
+      <div className="border-t border-gray-800 py-6 text-center text-sm text-gray-500">
         &copy; 2025 MakitLabs. All rights reserved.
       </div>
     </footer>
