@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const FormPage: React.FC = () => {
   const navigate = useNavigate();
 
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center px-4 py-12">
-      {/* Makit Labs Logo as a button */}
+      {/* Logo and back button */}
       <div className="mb-6 flex flex-col items-center">
         <button
-          onClick={() => navigate("/")} // Redirect to homepage
+          onClick={() => navigate("/")}
           className="transform transition-transform duration-300 hover:scale-105 cursor-pointer"
         >
           <img
-            src="/photo/logo/MakitLabs_Logo.png" // Correct public path
+            src="/photo/logo/MakitLabs_Logo.png"
             alt="Makit Labs Logo"
-            className="w-32 h-auto" // Adjust size as needed
+            className="w-32 h-auto"
           />
         </button>
       </div>
@@ -29,7 +34,6 @@ const FormPage: React.FC = () => {
           team will reach out to you soon.
         </p>
 
-        {/* Google Form Embed */}
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfs-0GPRpBO3F6yhuM87DYhPMLeDqSL5ofmf074TOJsINeBjg/viewform?embedded=true"
           className="w-full h-[800px] rounded-xl shadow-lg border border-gray-200"
