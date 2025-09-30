@@ -46,7 +46,7 @@ const Workshop: FC = ()=>{
         <img
             src="/photo/illustrations/100 plus students.png"
             alt="Decorative"
-            className="absolute bottom-[-10%] left-[30%] md:bottom-[-10%] md:left-[70%] drop-shadow-lg transition-transform duration-1000 group-hover:translate-x-10 group-hover:translate-y-10"
+            className="absolute bottom-[-10%] left-[24%] md:bottom-[-10%] md:left-[70%] drop-shadow-lg transition-transform duration-1000 group-hover:translate-x-10 group-hover:translate-y-10"
         />
 
         <button
