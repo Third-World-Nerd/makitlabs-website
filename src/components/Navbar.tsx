@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
         <div className="flex h-16 items-center justify-between">
             
           <div className="flex-shrink-0">
-            <img src="src/assets/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className=" h-36 w-auto" />
+            <img src="/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className=" h-36 w-auto" />
           </div>
 
           <div className="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-8">

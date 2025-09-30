@@ -20,10 +20,10 @@ const Hero: FC = () => {
         <p className="mt-6 md:mt-16 text-default text-textDefaultColor font-medium">
           Trusted by
           <div className="flex items-center space-x-4">
-            <img src="src/assets/photo/trustedBy/CIC Logo.png" alt="Logo 1" className="h-14 w-auto object-contain" />
-            <img src="src/assets/photo/trustedBy/IEEE Logo.png" alt="Logo 2" className="h-15 w-auto object-contain" />
-            <img src="src/assets/photo/trustedBy/KCMIT Logo.png" alt="Logo 3" className="h-15 w-auto object-contain" />
-            <img src="src/assets/photo/trustedBy/Pulchowk Logo.png" alt="Logo 4" className="h-13 w-auto object-contain" />
+            <img src="/photo/trustedBy/CIC Logo.png" alt="Logo 1" className="h-14 w-auto object-contain" />
+            <img src="/photo/trustedBy/IEEE Logo.png" alt="Logo 2" className="h-15 w-auto object-contain" />
+            <img src="/photo/trustedBy/KCMIT Logo.png" alt="Logo 3" className="h-15 w-auto object-contain" />
+            <img src="/photo/trustedBy/Pulchowk Logo.png" alt="Logo 4" className="h-13 w-auto object-contain" />
           </div>
         </p>
       </div>
@@ -52,7 +52,7 @@ const Hero: FC = () => {
           >
             <video
               className="w-full h-full object-cover"
-              src="src/assets/background video.mp4"
+              src="/background video.mp4"
               autoPlay
               loop
               muted
@@ -80,7 +80,7 @@ const Hero: FC = () => {
         </svg>
 
         <img
-          src="src/assets/photo/illustrations/100+ Students.png"
+          src="/photo/illustrations/100+ Students.png"
           alt="Decorative"
           className="absolute bottom-[3%] left-[40%] drop-shadow-lg transition-transform duration-300 group-hover:-translate-x-3 group-hover:-translate-y-3"
         />
@@ -92,7 +92,7 @@ const Hero: FC = () => {
         </button>
 
         <img
-          src="src/assets/photo/illustrations/star.png"
+          src="/photo/illustrations/star.png"
           alt="Decorative"
           className="absolute top-[5%] left-[20%] drop-shadow-lg w-12 h-12 transition-transform duration-300 group-hover:translate-x-4 group-hover:-translate-y-14"
         />

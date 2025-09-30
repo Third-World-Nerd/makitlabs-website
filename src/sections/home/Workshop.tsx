@@ -39,12 +39,12 @@ const Workshop: FC = ()=>{
     {/* Right Side */}
     <div className="relative h-[400px] w-full md:w-[40%] flex justify-end group">
       <img
-        src="src/assets/photo/testimonials/Sayog Rai.jpg"
+        src="/photo/testimonials/Sayog Rai.jpg"
         alt="Workshop"
         className="scale-100 w-full object-cover rounded-xl"
       />
         <img
-            src="src/assets/photo/illustrations/100+ Students.png"
+            src="/photo/illustrations/100+ Students.png"
             alt="Decorative"
             className="absolute bottom-[-10%] left-[30%] md:bottom-[-10%] md:left-[70%] drop-shadow-lg transition-transform duration-1000 group-hover:translate-x-10 group-hover:translate-y-10"
         />

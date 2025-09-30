@@ -27,7 +27,7 @@ const Footer: FC = () => {
           {/* Column 1: Logo and About/Services */}
           <div>
 
-            <img src="src/assets/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className="items-start h-36" />
+            <img src="/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className="items-start h-36" />
 
             <p className="mb-4 text-sm">
               In short we are a group of Engineers and Educators who provide:
