@@ -27,8 +27,8 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-8">
-            <NavLink href="#">About Us</NavLink>
-            <NavLink href="#">Courses</NavLink>
+            <NavLink href="#WhoAreWe">About Us</NavLink>
+            <NavLink href="#Courses">Courses</NavLink>
             <NavLink href="#">Products</NavLink>
             <a 
             className='text-primary text-xl hover:scale-110 cursor-pointer transition duration-300'
@@ -57,8 +57,8 @@ const Navbar: React.FC = () => {
           lg:hidden transition-all duration-400 ease-in-out`}>
           <div className='flex flex-row justify-between items-end'>
             <div className='flex flex-col space-y-4'>
-              <NavLink href="#">About Us</NavLink>
-              <NavLink href="#">Courses</NavLink>
+              <NavLink href="#WhoAreWe">About Us</NavLink>
+              <NavLink href="#Courses">Courses</NavLink>
               <NavLink href="#">Products</NavLink>
               <a 
               className='text-primary text-xl hover:scale-110 cursor-pointer transition duration-300'

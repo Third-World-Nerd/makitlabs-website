@@ -54,8 +54,8 @@ const Footer: FC = () => {
           <div>
             <h3 className="text-white text-lg font-semibold mb-6">Information</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-white transition">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition">Our Courses</a></li>
+              <li><a href="#WhoAreWe" className="hover:text-white transition">About Us</a></li>
+              <li><a href="#Courses" className="hover:text-white transition">Our Courses</a></li>
               <li><a href="#" className="hover:text-white transition">Our Products</a></li>
             </ul>
           </div>

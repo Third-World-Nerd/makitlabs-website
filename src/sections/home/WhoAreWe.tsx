@@ -2,7 +2,7 @@ import { whoarewe } from "../../assets/copies";
 
 const WhoAreWe: React.FC = () => {
   return (
-    <section className="w-full px-[5%] md:px-[15%] lg:px-[25%] 2xl:px-[10%] flex flex-col 2xl:flex-row sm:gap-12 md:mt-[190px] sm:mt-[90px]">
+    <section id="WhoAreWe" className="w-full px-[5%] md:px-[15%] lg:px-[25%] 2xl:px-[10%] flex flex-col 2xl:flex-row sm:gap-12 md:pt-[150px] sm:pt-[90px]">
       {/* Left Column */}
       <div className="flex flex-row gap-7 justify-center scale-60 sm:scale-90 md:scale-100">
         {/* First Column (Tall Image + Button) */}

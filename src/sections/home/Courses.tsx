@@ -2,7 +2,7 @@ import type {FC} from 'react'
 
 const Courses: FC = () => {
     return (
-<section className="mx-[5%] md:mx-[10%] mt-[150px] lg:mt-[230px] font-default bg-white">
+<section id="Courses" className="mx-[5%] md:mx-[10%] pt-[150px] font-default bg-white">
   {/* Heading */}
   <div className="text-center mb-12">
     <h4 className="uppercase text-primary/40 tracking-wide mb-2">

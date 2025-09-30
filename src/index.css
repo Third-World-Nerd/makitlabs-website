@@ -10,3 +10,7 @@
   --color-primary: #5E07E1;
   --color-bg-hero: rgba(94, 7, 225, 0.04);
 }
+
+html {
+  scroll-behavior: smooth;
+}
