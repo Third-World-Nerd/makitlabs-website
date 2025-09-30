@@ -4,12 +4,12 @@ import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from 'luci
 
 const Footer: FC = () => {
   return (
-    <footer className="relative bg-gray-900 text-white font-default">
+    <footer className="relative bg-gray-900 text-white font-default flex flex-col items-center">
       
       {/* 1. Top CTA Banner (Purple Bar) */}
-      <div className="absolute z-10 -mt-20 px-[440px] "> 
+      <div className="absolute z-10 -mt-20 px-[5%] 2xl:px-[15%]"> 
         <div className="bg-primary py-10 px-10 rounded-3xl shadow-2xl flex flex-col items-center justify-center text-center">
-          <h2 className="text-5xl md:text-6xl mb-8 text-white">
+          <h2 className="text-4xl xl:text-7xl mb-8 text-white">
             Want to know more, <span className="font-bold">Let's chat</span>
           </h2>
           <button
@@ -21,7 +21,7 @@ const Footer: FC = () => {
       </div>
 
       {/* 2. Main Footer Content (Columns) */}
-      <div className="pt-62 pb-16 px-[440px] text-gray-400">
+      <div className="pt-62 pb-16 px-[5%] 2xl:px-[15%] text-gray-400">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           
           {/* Column 1: Logo and About/Services */}
