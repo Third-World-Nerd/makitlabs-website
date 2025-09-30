@@ -94,7 +94,7 @@ function Testimonials() {
         <div className="flex gap-[32px] px-4 w-max">
           {/* Duplicate testimonials twice for smooth infinite scroll */}
           {[...testimonials, ...testimonials].map((t, idx) => (
-            <div key={idx} className="shrink-0 w-[360px]">
+            <div key={idx} className="shrink-0 w-[216] sm:w-[360px]">
               <TestimonialCard {...t} />
             </div>
           ))}
