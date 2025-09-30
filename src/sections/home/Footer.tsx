@@ -22,33 +22,9 @@ const Footer: FC = () => {
 
       {/* 2. Main Footer Content (Columns) */}
       <div className="pt-50 pb-16 px-[5%] 2xl:px-[15%] text-gray-400">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
           {/* Column 1: Logo and About/Services */}
-          <div>
-
-            <img src="/photo/logo/MakitLabs_Logo.png" alt="Makit Labs Logo" className="items-start h-36" />
-
-            <p className="mb-4 text-sm">
-              In short we are a group of Engineers and Educators who provide:
-            </p>
-
-            <ul className="list-disc list-inside space-y-2 text-sm ml-2">
-              <li className="text-white font-semibold">Two Services</li>
-              <ul className="list-none ml-5 space-y-1 text-gray-400">
-                <li>a. Weekly STEAM classes</li>
-                <li>b. Robotics, AI and Coding Bootcamps at Schools and Colleges</li>
-              </ul>
-              <li className="text-white font-semibold">One Product</li>
-              <ul className="list-none ml-5 space-y-1 text-gray-400">
-                <li>a. Kits and Digital Platform to practically learn STEAM concepts</li>
-              </ul>
-            </ul>
-            
-            <p className="mt-4 text-sm">
-              And make sure to check our youtube channel <span className="font-semibold text-white">Third World Nerd</span> where we blend technology with humor to simultaneously provide both education and entertainment.
-            </p>
-          </div>
 
           {/* Column 2: Information Links */}
           <div>
