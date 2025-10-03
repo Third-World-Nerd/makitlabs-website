@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import { reviews } from "../../assets/reviews";
-import ReviewCard from "../../components/ReviewCard";
+import { reviews } from "../../../assets/reviews";
+import ReviewCard from "../../../components/ReviewCard";
 import { useState } from "react";
 
 const TrustOurClients: FC = () => {

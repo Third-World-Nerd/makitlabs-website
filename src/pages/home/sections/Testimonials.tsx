@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
-import TestimonialCard from "../../components/TestimonialCard";
-import { testimonials } from "../../assets/testimonials";
+import TestimonialCard from "../../../components/TestimonialCard";
+import { testimonials } from "../../../assets/testimonials";
 
 function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);

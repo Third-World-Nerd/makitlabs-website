@@ -1,4 +1,4 @@
-import { whyus } from "../../assets/copies";
+import { whyus } from "../../../assets/copies";
 
 import { useState } from "react";
 

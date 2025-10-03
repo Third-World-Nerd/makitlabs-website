@@ -1,4 +1,4 @@
-import { whoarewe } from "../../assets/copies";
+import { whoarewe } from "../../../assets/copies";
 import { useNavigate } from "react-router-dom";
 
 const WhoAreWe: React.FC = () => {
