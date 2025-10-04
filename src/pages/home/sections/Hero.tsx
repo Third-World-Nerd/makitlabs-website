@@ -1,36 +1,58 @@
 import type { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 const Hero: FC = () => {
   const navigate = useNavigate();
   return (
     <section className="relative top-[84px] h-[calc(100vh-84px)] bg-white font-default overflow-hidden">
-      
       {/* Left Text */}
       <div className="pl-[8%] lg:z-10 md:relative flex flex-col md:justify-center md:h-full items-start">
         <h1 className="text-4xl sm:text-5xl pt-[20px] lg:text-5xl xl:text-6xl 2xl:text-7xl text-default leading-tight">
-          Stop just <span className="text-primary font-bold whitespace-nowrap">watching</span><br />
-          Robots.<br /> 
+          Stop just{" "}
+          <span className="text-primary font-bold whitespace-nowrap">
+            watching
+          </span>
+          <br />
+          Robots.
+          <br />
           Start <span className="text-primary font-bold">making</span> it.
         </h1>
         <span>
-        <button className="mt-10 bg-primary text-white 2xl:text-xl px-4 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-        onClick={()=>{navigate("/form")}}
-        >
-          Join our free demo class &gt;&gt;
-        </button>
+          <button
+            className="mt-10 bg-primary text-white 2xl:text-xl px-4 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+            onClick={() => {
+              navigate("/form");
+            }}
+          >
+            Join our free demo class &gt;&gt;
+          </button>
         </span>
 
         <p className="mt-6 md:mt-16 text-default text-textDefaultColor font-medium">
           Trusted by
-          <div className="flex items-center space-x-4">
-            <img src="/photo/trustedBy/CIC Logo.png" alt="Logo 1" className="h-14 w-auto object-contain" />
-            <img src="/photo/trustedBy/IEEE Logo.png" alt="Logo 2" className="h-15 w-auto object-contain" />
-            <img src="/photo/trustedBy/KCMIT Logo.png" alt="Logo 3" className="h-15 w-auto object-contain" />
-            <img src="/photo/trustedBy/Pulchowk Logo.png" alt="Logo 4" className="h-13 w-auto object-contain" />
-          </div>
         </p>
+        <div className="flex items-center space-x-4">
+          <img
+            src="/photo/trustedBy/CIC Logo.png"
+            alt="Logo 1"
+            className="h-14 w-auto object-contain"
+          />
+          <img
+            src="/photo/trustedBy/IEEE Logo.png"
+            alt="Logo 2"
+            className="h-15 w-auto object-contain"
+          />
+          <img
+            src="/photo/trustedBy/KCMIT Logo.png"
+            alt="Logo 3"
+            className="h-15 w-auto object-contain"
+          />
+          <img
+            src="/photo/trustedBy/Pulchowk Logo.png"
+            alt="Logo 4"
+            className="h-13 w-auto object-contain"
+          />
+        </div>
       </div>
 
       {/* Blob Video on Right */}
@@ -50,11 +72,7 @@ const Hero: FC = () => {
           </defs>
 
           {/* Embed video using foreignObject */}
-          <foreignObject
-            width="570"
-            height="557"
-            clipPath="url(#blobClip)"
-          >
+          <foreignObject width="570" height="557" clipPath="url(#blobClip)">
             <video
               className="w-full h-full object-cover"
               src="/background video.mp4"
@@ -76,11 +94,11 @@ const Hero: FC = () => {
         >
           <path
             transform="scale(0.95) translate(20, 10)"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M323.388 29.8866C420.589 25.0797 527.477 -28.1139 604.247 23.0941C683.27 75.8049 690.606 178.859 673.276 263.271C658.333 336.051 580.579 378.719 520.355 431.708C458.604 486.039 411.524 563.377 323.388 571.118C230.572 579.271 143.552 529.726 81.3279 470.271C22.405 413.969 2.66062 338.818 1.20875 263.271C-0.273515 186.143 4.40955 99.2139 73.2386 49.3546C139.654 1.24401 236.493 34.184 323.388 29.8866Z"
             stroke="#5E07E1"
-            stroke-opacity="0.4"
+            strokeOpacity="0.4"
           />
         </svg>
 
@@ -90,9 +108,7 @@ const Hero: FC = () => {
           className="absolute bottom-[3%] left-[40%] drop-shadow-lg transition-transform duration-300 group-hover:-translate-x-3 group-hover:-translate-y-3"
         />
 
-        <button
-          className="absolute bottom-[50%] left-[-5%] text-primary opacity-90 rounded-md bg-[rgba(250,250,250,0.6)] px-4 py-2 drop-shadow-lg transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2"
-        >
+        <button className="absolute bottom-[50%] left-[-5%] text-primary opacity-90 rounded-md bg-[rgba(250,250,250,0.6)] px-4 py-2 drop-shadow-lg transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2">
           10 Workshops
         </button>
 

@@ -2,87 +2,158 @@ import type { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Assuming you have SVG icons for social media (e.g., from lucide-react or similar)
-import { Mail, Phone, MapPin, Facebook, Instagram, Youtube} from 'lucide-react'; 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Instagram,
+  Youtube,
+} from "lucide-react";
 
-const Footer: FC = () => {
+interface FooterProps {
+  showCTA: boolean;
+}
+
+const Footer: FC<FooterProps> = ({ showCTA }) => {
   const navigate = useNavigate();
+
+  const mainContentPadding = showCTA ? "pt-50" : "pt-15";
 
   return (
     <footer className="relative bg-gray-900 text-white font-default flex flex-col items-center">
-      
       {/* 1. Top CTA Banner (Purple Bar) */}
-      <div className="absolute z-10 -mt-30 px-[5%] 2xl:px-[15%]"> 
-        <div className="bg-primary py-10 px-10 rounded-3xl shadow-2xl flex flex-col items-center justify-center text-center">
-          <h2 className="text-4xl xl:text-7xl mb-8 text-white">
-            Want to know more? <span className="font-bold">Let's chat</span>
-          </h2>
-          <button
-            className="border mt-7 text-xl text-purple-600 bg-white px-4 py-2 rounded-full w-max cursor-pointer hover:bg-primary hover:text-white transition duration-300"
-            onClick={() => navigate("/form")}
-          >
-            Contact Our Team<span className="tracking-tighter font-mono pl-2">&gt;&gt;</span>
-          </button>
+      {/* take a argumennt named showCTA if thats true then show the cta banner otherwise not */}
+      {showCTA && (
+        <div className="absolute z-10 -mt-30 px-[5%] 2xl:px-[15%]">
+          <div className="bg-primary py-10 px-10 rounded-3xl shadow-2xl flex flex-col items-center justify-center text-center">
+            <h2 className="text-4xl xl:text-7xl mb-8 text-white">
+              Want to know more? <span className="font-bold">Let's chat</span>
+            </h2>
+            <button
+              className="border mt-7 text-xl text-purple-600 bg-white px-4 py-2 rounded-full w-max cursor-pointer hover:bg-primary hover:text-white transition duration-300"
+              onClick={() => navigate("/form")}
+            >
+              Contact Our Team
+              <span className="tracking-tighter font-mono pl-2">&gt;&gt;</span>
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 2. Main Footer Content (Columns) */}
-      <div className="pt-50 pb-16 px-[5%] 2xl:px-[15%] text-gray-400">
+      <div
+        className={`${mainContentPadding} pb-16 px-[5%] 2xl:px-[15%] text-gray-400`}
+      >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          
           {/* Column 1: Logo and About/Services */}
 
           {/* Column 2: Information Links */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-6">Information</h3>
+            <h3 className="text-white text-lg font-semibold mb-6">
+              Information
+            </h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#WhoAreWe" className="hover:text-white transition">About Us</a></li>
-              <li><a href="#Courses" className="hover:text-white transition">Our Courses</a></li>
-              <li><a href="#" className="hover:text-white transition">Our Products</a></li>
+              <li>
+                <a href="/#WhoAreWe" className="hover:text-white transition">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/#Courses" className="hover:text-white transition">
+                  Our Courses
+                </a>
+              </li>
+              <li>
+                <a href="/#Products" className="hover:text-white transition">
+                  Our Products
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Column 3: Contact Us & Location */}
           <div className="col-span-1">
             {/* Contact Us */}
-            <h3 className="text-white text-lg font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-white text-lg font-semibold mb-6">
+              Contact Us
+            </h3>
             <ul className="space-y-3 text-sm ">
               <li className="flex items-center hover:text-white transition">
                 <Phone className="w-4 h-4 mr-2 text-white" />
                 <a
-                href="https://wa.me/9779767470587?text=I%20saw%20your%20website%20and%20want%20to%20know%20more%20about%20your%20services."
-                target="_blank"
-                >+977-9767470587</a>
+                  href="https://wa.me/9779767470587?text=I%20saw%20your%20website%20and%20want%20to%20know%20more%20about%20your%20services."
+                  target="_blank"
+                >
+                  +977-9767470587
+                </a>
               </li>
               <li className="flex items-center hover:text-white transition">
                 <Mail className="w-4 h-4 mr-2 text-white" />
-                <a
-                href="mailto:makitnepal@gmail.com"
-                target="_blank"
-                >makitnepal@gmail.com</a>
+                <a href="mailto:makitnepal@gmail.com" target="_blank">
+                  makitnepal@gmail.com
+                </a>
               </li>
               {/* Social Icons */}
               <li className="flex space-x-4 pt-2">
-                <a href="https://facebook.com/61575099465786" target="_blank" aria-label="Facebook" className="hover:text-white transition"><Facebook className="w-5 h-5" /></a>
-                <a href="https://instagram.com/makit.labs" target="_blank" aria-label="Instagram" className="hover:text-white transition"><Instagram className="w-5 h-5" /></a>
-                <a href="https://tiktok.com/@makit.labs" target="_blank" aria-label="Tiktok" className="hover:text-white transition">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 448 512"> <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" /></svg>
+                <a
+                  href="https://facebook.com/61575099465786"
+                  target="_blank"
+                  aria-label="Facebook"
+                  className="hover:text-white transition"
+                >
+                  <Facebook className="w-5 h-5" />
                 </a>
-                <a href="https://youtube.com/@thirdworldnerd" target="_blank" aria-label="YouTube" className="hover:text-white transition"><Youtube className="w-5 h-5" /></a>
+                <a
+                  href="https://instagram.com/makit.labs"
+                  target="_blank"
+                  aria-label="Instagram"
+                  className="hover:text-white transition"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://tiktok.com/@makit.labs"
+                  target="_blank"
+                  aria-label="Tiktok"
+                  className="hover:text-white transition"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 448 512"
+                  >
+                    {" "}
+                    <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://youtube.com/@thirdworldnerd"
+                  target="_blank"
+                  aria-label="YouTube"
+                  className="hover:text-white transition"
+                >
+                  <Youtube className="w-5 h-5" />
+                </a>
               </li>
             </ul>
-            
+
             {/* Location */}
-            <h3 className="text-white text-lg font-semibold mt-8 mb-4">Location</h3>
+            <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+              Location
+            </h3>
             <div className="flex text-sm hover:text-white transition">
-                <MapPin className="w-4 h-4 mr-2 text-white flex-shrink-0 mt-1" />
-                <a
+              <MapPin className="w-4 h-4 mr-2 text-white flex-shrink-0 mt-1" />
+              <a
                 href="https://maps.app.goo.gl/nEoqWGoAAeWnZZ6R7"
                 target="_blank"
-                >
-                    Cosmic Innovation Center<br/>
-                    Sanepa Marg, Kathmandu<br/>
-                    Opposite to Norwegian Embassy
-                </a>
+              >
+                Cosmic Innovation Center
+                <br />
+                Sanepa Marg, Kathmandu
+                <br />
+                Opposite to Norwegian Embassy
+              </a>
             </div>
           </div>
 
@@ -99,10 +170,8 @@ const Footer: FC = () => {
                   allowFullScreen
                 />
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
 

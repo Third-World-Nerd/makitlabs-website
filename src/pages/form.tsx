@@ -1,48 +1,99 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { supabase } from "../config/supabaseClient";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import FloatingLabelInput from "../components/FloatingLabelInput";
 
 const FormPage: React.FC = () => {
-  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [remarks, setRemarks] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const { error } = await supabase
+      .from("contacts")
+      .insert([{ name, email, phone, remarks }]);
+
+    if (error) {
+      alert("Error submitting form: " + error.message);
+    } else {
+      alert("Form submitted successfully!");
+      setName("");
+      setEmail("");
+      setPhone("");
+      setRemarks("");
+    }
+
+    setLoading(false);
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center px-4 py-12">
-      {/* Logo and back button */}
-      <div className="mb-6 flex flex-col items-center">
-        <button
-          onClick={() => navigate("/")}
-          className="transform transition-transform duration-300 hover:scale-105 cursor-pointer"
-        >
-          <img
-            src="/photo/logo/MakitLabs_Logo.png"
-            alt="Makit Labs Logo"
-            className="w-32 h-auto"
-          />
-        </button>
+    <>
+      <Navbar />
+      <div className="relative top-[84px] flex items-center justify-center bg-white pt-12 pb-60 font-default">
+        <div className="w-full max-w-lg p-6">
+          {/* Header section like in your screenshot */}
+          <h2 className="text-4xl lg:text-7xl">
+            Contact <span className="text-primary font-bold">us</span>
+          </h2>
+
+          <div className="pt-6 pb-10 text-black/50">
+            Want to get started with robotics? Fill out the form to receive a
+            free consultation.
+          </div>
+
+          {/* Form body */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <FloatingLabelInput
+              id="name"
+              label="Full Name"
+              required={true}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <FloatingLabelInput
+              id="email"
+              label="Email"
+              required={true}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <FloatingLabelInput
+              id="phone"
+              label="Phone Number"
+              required={true}
+              type="Number"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+            <FloatingLabelInput
+              id="remarks"
+              label="Remarks"
+              value={remarks}
+              autoAdjustHeight={true}
+              onChange={(e) => setRemarks(e.target.value)}
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full px-4 py-2 bg-primary text-white font-medium hover:scale-105 duration-300"
+            >
+              {loading ? "Submitting..." : "Submit"}
+            </button>
+          </form>
+        </div>
       </div>
-
-      <div className="max-w-2xl w-full text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-          Thank You for Visiting Makit Labs 🎉
-        </h1>
-        <p className="text-lg text-gray-700 mb-6">
-          If you’re interested in us, please fill out the form below and our
-          team will reach out to you soon.
-        </p>
-
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfs-0GPRpBO3F6yhuM87DYhPMLeDqSL5ofmf074TOJsINeBjg/viewform?embedded=true"
-          className="w-full h-[800px] rounded-xl shadow-lg border border-gray-200"
-          allowFullScreen
-        ></iframe>
-
-        <div className="mt-6 text-2xl">🤖✨🚀</div>
-      </div>
-    </div>
+      <Footer showCTA={false} />
+    </>
   );
 };
 
