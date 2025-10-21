@@ -65,7 +65,7 @@ const Footer: FC<FooterProps> = ({ showCTA }) => {
                 </a>
               </li>
               <li>
-                <a href="/#Products" className="hover:text-white transition">
+                <a href="/products" className="hover:text-white transition">
                   Our Products
                 </a>
               </li>
