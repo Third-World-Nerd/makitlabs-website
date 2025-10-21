@@ -26,9 +26,8 @@ const Navbar: React.FC = () => {
   // UX Improvement: Close menu when an anchor link is clicked
   const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const href = e.currentTarget.getAttribute("href");
-    if (href && href.startsWith("#")) {
-      // Small timeout to allow the smooth scroll animation to begin first
-      setTimeout(() => setIsOpen(false), 300);
+    if (href && href.includes("#")) {
+      setTimeout(() => setIsOpen(false), 100); // 100ms delay is enough
     }
   };
 
@@ -67,7 +66,7 @@ const Navbar: React.FC = () => {
         <div className="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-8">
           <NavLink href="/#WhoAreWe">About Us</NavLink>
           <NavLink href="/#Courses">Courses</NavLink>
-          <NavLink href="/#Products">Products</NavLink>
+          <NavLink href="/products">Products</NavLink>
           {/* Added #Products for consistent anchor link */}
           {/* WhatsApp Link */}
           <a
@@ -121,7 +120,7 @@ const Navbar: React.FC = () => {
           {/* Navigation Links (mobile) */}
           <NavLink href="/#WhoAreWe">About Us</NavLink>
           <NavLink href="/#Courses">Courses</NavLink>
-          <NavLink href="/#Products">Products</NavLink>
+          <NavLink href="/products">Products</NavLink>
 
           {/* Contact & Enroll Block (mobile) */}
           <div className="pt-4 border-t border-gray-100 mt-6">
